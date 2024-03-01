@@ -1,0 +1,88 @@
+.mydiv{
+
+background-color: rgb(208, 210, 251);
+}
+
+.add_product{
+  border-radius: 18px;
+margin-top: 30px;
+padding: 15px;
+width: 30%;
+font-weight: bold;
+font-size: 18px;
+}
+
+.remove_product{
+  margin-right: 16px;
+}
+
+.remove_product,.update_product{
+font-weight: bold;
+border-radius: 8px;
+
+}
+
+h1 {
+
+  text-align: center;
+  padding: 20px;
+background-color: navy;
+color: #fff;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.create-product,
+.all-products {
+  width: 48%;
+  padding: 20px;
+
+  border-radius: 5px;
+}
+
+.create-product form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.create-product label {
+  margin-bottom: 5px;
+}
+
+.create-product input,
+.create-product textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.all-products{
+margin-top: 40px;
+}
+
+.all-products table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.all-products th,
+.all-products td {
+  padding: 8px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+button{
+border: none;
+outline: none;
+padding: 10px;
+background-color: darkorange;
+color: navy;
+}

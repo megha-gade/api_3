@@ -1,0 +1,55 @@
+<div class="mydiv">
+    <h1>Manage Products</h1>
+    <div class="container">
+        <div class="create-product">
+            <h2>Create Product</h2>
+            <form #myForm="ngForm"  (ngSubmit)="onSubmitForm(myForm.value)">
+                <label for="product-name">Product Name:</label>
+                <input type="text" id="product-name" name="product_name" ngModel>
+
+
+                <label for="product-description">Product Description:</label>
+                <input id="product-description" name="product_description" ngModel>
+
+
+                <label for="product-price">Product Price:</label>
+                <input type="number" id="product-price" name="product_price" ngModel>
+
+
+                <button type="submit" class="add_product" >{{editMode?'Update Product':'Add Product'}}</button>
+            </form>
+        </div>
+        <div class="all-products">
+            <h2>All Products</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Activity</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let p of allProduct;index as i">
+                    <tr>
+                        <td>{{i+1}}</td>
+                        <td>{{p.product_name}}</td>
+                        <td>{{p.product_description}}</td>
+                        <td>${{p.product_price}}</td>
+                        <td>
+                          <button type="submit" class="remove_product" (click)="deleteProductById(p.id)">Remove</button>
+                          <button type="submit" class="update_product" (click)="updateProductById(p.id)">Update</button>
+                        </td>
+                    </tr>
+                    </tbody>
+            </table>
+
+            <button (click)="fetchAllProduct()" type="submit" class="remove_product" style="margin-top:20px ;">Fetch Product</button>
+            <button type="submit" class="remove_product" style="margin-top:20px ;" (click)="clearAllProduct()">Clear All Products</button>
+
+        </div>
+    </div>
+
+
+  </div>
